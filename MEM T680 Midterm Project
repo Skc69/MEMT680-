@@ -1,0 +1,38 @@
+# Create a game of Craps
+import sys, random
+# Create a game of Craps in Python
+
+# I want the code to do the following:
+#  Define a class for Dice
+class Dice:  # Defines the class
+    pass  # passes when called
+    def __init__(self, die1, die2, total):
+        self.die1 = random.randint(1,6);
+        self.die2 = random.randint(1,6);
+    
+    def roll():
+      return(die1 + die2)
+
+roll_1 = roll()
+print(roll_1)
+
+
+
+
+# The Dice has a method Roll
+# Define a class for Table
+# The Table will inherit the Dice
+# The Table will have a state Point
+# Define a class for Player
+# Player will inherit from the Table
+# At initialization, ask the user to input a name for Player
+# Ask the player for bankroll (money on the table)
+# Only allow user to make bets in dollars
+# The script tells the player they can’t have a bankroll that can’t be converted to dollars
+# Try or Except may work here
+# If the bankroll can’t be converted, prompt the user for bankroll again
+# Decorator may work here
+# The script continually asks until the bankroll is valid
+
+
+
