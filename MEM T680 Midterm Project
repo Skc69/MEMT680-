@@ -4,27 +4,66 @@ import sys, random
 
 # I want the code to do the following:
 #  Define a class for Dice
-class Dice:  # Defines the class
-    pass  # passes when called
-    def __init__(self, die1, die2, total):
-        self.die1 = random.randint(1,6);
-        self.die2 = random.randint(1,6);
-    
-    def roll():
-      return(die1 + die2)
+# class Dice:
 
-roll_1 = roll()
-print(roll_1)
+# # The Dice has a method Roll
+#   def roll():
+#     die1 = random.randint(1,6)
+#     die2 = random.randint(1,6)
+#     total = die1 + die2
+
+#     print(die1)
+#     print(die2)
+#     print(total)
+
+#   roll()
+
+class dice:
+
+  def __init__(self):
+        self.die1 = random.randint(1,6)
+        self.die2 = random.randint(1,6)
+        self.total = int(self.die1 + self.die2)
+
+d1 = dice()
+# print(d1.die1)
+# print(d1.die2)
+# print(d1.total)
 
 
-
-
-# The Dice has a method Roll
 # Define a class for Table
+class table(dice):  # Defines the class
+  
+  table_point = True;
+
+  pass
 # The Table will inherit the Dice
+t1 = table()
+print(t1.table_point)
+# print(t1.die1)
+# print(t1.die2)
+# print(t1.total)  
+
 # The Table will have a state Point
+
 # Define a class for Player
+class Player(table):  # Defines the class
+    pass  # passes when called
+
+    def __init__(self):
+      self.name = input("Enter your name, please: ")
+      try:
+        self.bankroll = int(input("Please enter your bankroll: "))
+        print("num:", self.bankroll)
+      except ValueError:
+          print("Please input integer only...") 
+
+
 # Player will inherit from the Table
+P1 = Player()
+print(P1.name)
+print(P1.bankroll)
+
 # At initialization, ask the user to input a name for Player
 # Ask the player for bankroll (money on the table)
 # Only allow user to make bets in dollars
